@@ -1,8 +1,8 @@
   public void settings() {
-      size(500, 500);
     }
   
     public void setup(){
+      size(500, 500);
       strokeWeight(6);
       frameRate(4);
       background(0);
