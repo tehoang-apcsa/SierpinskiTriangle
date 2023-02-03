@@ -1,3 +1,4 @@
+int count = 0;
 public void setup(){
       size(500, 500);
       strokeWeight(6);
@@ -7,8 +8,16 @@ public void setup(){
     public void draw(){
      sierpinski(0,495,1000);
      stroke((int)(Math.random()*255));
-     if (mousePressed && (mouseButton == LEFT)) {
-      sierpinski(0,(int)(Math.random()*501),(int)(Math.random()*501)+250);
+     if (count<10)
+       count++;
+     if (mousePressed && (mouseButton == LEFT))
+     {
+       background(0);
+       count=0;
+       sierpinski(0,495,1000);
+     }
+     if (count<10) {
+      sierpinski(0,(int)(Math.random()*351)+150,(int)(Math.random()*501)+250);
      }
     }
     public void mousePressed(){ //optional
